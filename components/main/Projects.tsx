@@ -1,34 +1,30 @@
-import React from "react";
-import ProjectCard from "../sub/ProjectCard";
+import Reveal from "@/components/sub/Reveal";
+import SectionHeading from "@/components/sub/SectionHeading";
+import { projects } from "@/constants";
 
-const Projects = () => {
+export default function Projects() {
   return (
-    <div
-      className="flex flex-col items-center justify-center py-20"
-      id="projects"
-    >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
-        My Projects
-      </h1>
-      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
-        <ProjectCard
-          src="/NextWebsite.png"
-          title="Modern Next.js Portfolio"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
-        <ProjectCard
-          src="/CardImage.png"
-          title="Interactive Website Cards"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
-        <ProjectCard
-          src="/SpaceWebsite.png"
-          title="Space Themed Website"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
+    <section id="projects" className="scroll-mt-20 pb-28">
+      <SectionHeading index="03" title="Side Projects" />
+      <div className="mt-14 grid gap-6 sm:grid-cols-2">
+        {projects.map((project, i) => (
+          <Reveal
+            key={project.name}
+            delay={i * 0.06}
+            className="rounded-sm bg-soft-stone p-8"
+          >
+            <h3 className="font-display text-[2rem] font-normal leading-[1.2] tracking-[-0.01em] text-ink">
+              {project.name}
+            </h3>
+            <p className="mt-4 text-base leading-[1.5] text-body-muted">
+              {project.description}
+            </p>
+            <p className="mt-8 border-t border-ink/10 pt-4 font-mono text-xs uppercase tracking-[0.02em] text-body-muted">
+              {project.tech.join(" · ")}
+            </p>
+          </Reveal>
+        ))}
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Projects;
+}

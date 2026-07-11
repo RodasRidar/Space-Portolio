@@ -1,15 +1,40 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import StarsCanvas from "@/components/main/StarBackground";
-import Navbar from "@/components/main/Navbar";
-import Footer from "@/components/main/Footer";
+import Header from "@/components/main/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-display",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-sans",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
-  title: "Space Portfolio",
-  description: "This is my portfolio",
+  metadataBase: new URL("https://rodasridar.dev"),
+  title: "Richard Rodas — Senior Frontend Engineer",
+  description:
+    "Senior Frontend Engineer specialized in banking and enterprise software. Angular (v13–v21), TypeScript, RxJS and React, with a full-stack foundation in .NET and Node.js. Remote, US time zones.",
+  openGraph: {
+    title: "Richard Rodas — Senior Frontend Engineer",
+    description:
+      "Frontend engineering for banking and enterprise — Angular, TypeScript, React. Remote, US time zones.",
+    url: "https://rodasridar.dev",
+    siteName: "Richard Rodas",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -20,12 +45,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
+        className={`${spaceGrotesk.variable} ${inter.variable} ${plexMono.variable} font-sans`}
       >
-        <StarsCanvas />
-        <Navbar />
+        <Header />
         {children}
-        {/* <Footer /> */}
       </body>
     </html>
   );

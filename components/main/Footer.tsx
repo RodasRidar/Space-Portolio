@@ -1,74 +1,50 @@
-import React from "react";
+import Reveal from "@/components/sub/Reveal";
 import {
-  RxDiscordLogo,
-  RxGithubLogo,
-  RxInstagramLogo,
-  RxTwitterLogo,
-  RxLinkedinLogo,
-} from "react-icons/rx";
+  certifications,
+  education,
+  languages,
+  profile,
+} from "@/constants";
 
-import { FaYoutube } from "react-icons/fa";
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] ">
-        <div className="w-full flex flex-col items-center justify-center m-auto">
-            <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
-                
-
-                <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-[16px]">Community</div>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaYoutube />
-                        <span className="text-[15px] ml-[6px]">Youtube</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxGithubLogo />
-                        <span className="text-[15px] ml-[6px]">Github</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxDiscordLogo />
-                        <span className="text-[15px] ml-[6px]">Discord</span>    
-                    </p>
-                </div>
-                <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-[16px]">Social Media</div>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaYoutube />
-                        <span className="text-[15px] ml-[6px]">Instagram</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxGithubLogo />
-                        <span className="text-[15px] ml-[6px]">Twitter</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxDiscordLogo />
-                        <span className="text-[15px] ml-[6px]">Linkedin</span>    
-                    </p>
-                </div>
-                <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-[16px]">About</div>
-                   <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                     
-                        <span className="text-[15px] ml-[6px]">Become Sponsor</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                      
-                        <span className="text-[15px] ml-[6px]">Learning about me</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                  
-                        <span className="text-[15px] ml-[6px]">mifwebchain@gmail.com</span>    
-                    </p>
-                </div>
-            </div>
-
-            <div className="mb-[20px] text-[15px] text-center">
-                &copy; WebChain Dev 2023 Inc. All rights reserved
-            </div>
-        </div>
-    </div>
-  )
+    <footer id="contact" className="scroll-mt-20 bg-primary text-on-dark">
+      <div className="mx-auto w-full max-w-5xl px-6 pb-12 pt-20 sm:pt-28">
+        <Reveal>
+          <p className="font-mono text-sm uppercase tracking-[0.02em] text-coral">
+            04 — Contact
+          </p>
+          <h2 className="mt-6 max-w-3xl font-display text-4xl font-normal leading-[1.1] tracking-[-0.01em] text-on-dark sm:text-5xl">
+            Open to senior frontend roles — remote, US time zones.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-[1.4] text-white/70">
+            If you are building for banking, enterprise, or AI-powered
+            products, let’s talk.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center gap-6">
+            <a
+              href={`mailto:${profile.email}`}
+              className="rounded-full bg-white px-6 py-3 text-sm font-medium text-primary transition-opacity hover:opacity-85"
+            >
+              {profile.email}
+            </a>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base text-white underline underline-offset-4 transition-colors hover:text-white/70"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <div className="mt-16 space-y-2 border-t border-white/10 pt-8 font-mono text-xs uppercase tracking-[0.02em] text-muted">
+            <p>Languages — {languages}</p>
+            <p>Education — {education}</p>
+            <p>Certifications — {certifications}</p>
+          </div>
+          <p className="mt-10 text-xs text-muted">© 2026 {profile.name}</p>
+        </Reveal>
+      </div>
+    </footer>
+  );
 }
-
-export default Footer
