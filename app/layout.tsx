@@ -23,13 +23,13 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rodasridar.dev"),
-  title: "Richard Rodas — Senior Frontend Engineer",
+  title: "Richard Rodas · Fullstack Engineer",
   description:
-    "Senior Frontend Engineer specialized in banking and enterprise software. Angular (v13–v21), TypeScript, RxJS and React, with a full-stack foundation in .NET and Node.js. Remote, US time zones.",
+    "Fullstack Engineer with 5+ years in banking and enterprise. Angular, React and Next.js micro-frontends, Node.js and Nest.js microservices, on AWS and Azure. Remote across US and Canada.",
   openGraph: {
-    title: "Richard Rodas — Senior Frontend Engineer",
+    title: "Richard Rodas · Fullstack Engineer",
     description:
-      "Frontend engineering for banking and enterprise — Angular, TypeScript, React. Remote, US time zones.",
+      "Fullstack engineering for banking and enterprise. Angular, React, Next.js, Node.js and Nest.js. Remote across US and Canada.",
     url: "https://rodasridar.dev",
     siteName: "Richard Rodas",
     locale: "en_US",

@@ -1,11 +1,16 @@
+"use client";
+
 import Reveal from "@/components/sub/Reveal";
 import SectionHeading from "@/components/sub/SectionHeading";
-import { projects } from "@/constants";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 
 export default function Projects() {
+  const { t } = useLanguage();
+  const { projects } = t;
+
   return (
     <section id="projects" className="scroll-mt-20 pb-28">
-      <SectionHeading index="03" title="Side Projects" />
+      <SectionHeading index="03" title={t.ui.sections.projects} />
       <div className="mt-14 grid gap-6 sm:grid-cols-2">
         {projects.map((project, i) => (
           <Reveal

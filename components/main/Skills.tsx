@@ -1,11 +1,16 @@
+"use client";
+
 import Reveal from "@/components/sub/Reveal";
 import SectionHeading from "@/components/sub/SectionHeading";
-import { skillGroups } from "@/constants";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 
 export default function Skills() {
+  const { t } = useLanguage();
+  const { skillGroups } = t;
+
   return (
     <section id="skills" className="scroll-mt-20 pb-28">
-      <SectionHeading index="02" title="Skills" />
+      <SectionHeading index="02" title={t.ui.sections.skills} />
       <div className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
         {skillGroups.map((group, i) => (
           <Reveal

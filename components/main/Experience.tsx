@@ -1,11 +1,16 @@
+"use client";
+
 import Reveal from "@/components/sub/Reveal";
 import SectionHeading from "@/components/sub/SectionHeading";
-import { earlierRoles, experience } from "@/constants";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 
 export default function Experience() {
+  const { t } = useLanguage();
+  const { experience } = t;
+
   return (
     <section id="experience" className="scroll-mt-20 pb-28">
-      <SectionHeading index="01" title="Experience" />
+      <SectionHeading index="01" title={t.ui.sections.experience} />
       <ol className="mt-14">
         {experience.map((job) => (
           <li
@@ -52,11 +57,6 @@ export default function Experience() {
           </li>
         ))}
       </ol>
-      <Reveal>
-        <p className="border-t border-hairline pt-6 font-mono text-xs uppercase tracking-[0.02em] text-muted">
-          {earlierRoles}
-        </p>
-      </Reveal>
     </section>
   );
 }

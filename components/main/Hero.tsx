@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, MotionConfig, type Variants } from "framer-motion";
-import { metrics, profile } from "@/constants";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 
 const container: Variants = {
   hidden: {},
@@ -18,6 +18,9 @@ const rise: Variants = {
 };
 
 export default function Hero() {
+  const { t } = useLanguage();
+  const { profile, metrics } = t;
+
   return (
     <MotionConfig reducedMotion="user">
       <motion.section
@@ -31,14 +34,14 @@ export default function Hero() {
           variants={rise}
           className="font-mono text-sm uppercase tracking-[0.02em] text-body-muted"
         >
-          {profile.role} — {profile.location}
+          {profile.role} · {profile.location}
         </motion.p>
 
         <motion.h1
           variants={rise}
           className="mt-8 max-w-4xl font-display text-[clamp(2.75rem,8vw,6rem)] font-normal leading-none tracking-[-0.02em] text-ink"
         >
-          Frontend engineering for banking and enterprise.
+          {t.ui.hero.headline}
         </motion.h1>
 
         <motion.p
@@ -53,7 +56,7 @@ export default function Hero() {
             href={`mailto:${profile.email}`}
             className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-on-dark transition-opacity hover:opacity-85"
           >
-            Get in touch
+            {t.ui.hero.getInTouch}
           </a>
           <a
             href={profile.linkedin}
