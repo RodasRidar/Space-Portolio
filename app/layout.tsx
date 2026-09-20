@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/main/Header";
+import { LanguageProvider } from "@/components/i18n/LanguageProvider";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -47,8 +48,10 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} ${plexMono.variable} font-sans`}
       >
-        <Header />
-        {children}
+        <LanguageProvider>
+          <Header />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

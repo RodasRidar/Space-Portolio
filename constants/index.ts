@@ -82,9 +82,9 @@ const en: Content = {
     email: "richard@rodasridar.dev",
     linkedin: "https://linkedin.com/in/rodasridar",
     github: "https://github.com/rodasridar",
-    cvPath: "/resume.pdf",
+    cvPath: "/Richard_Rodas_CV_FullStack_Developer.pdf",
     summary:
-      "Fullstack Engineer with 5+ years shipping production web apps end to end, from Angular, React and Next.js micro-frontends to Node.js and Nest.js microservices, for top-tier banks, enterprise clients across Latin America, and a global AI talent platform serving 100K+ users. Comfortable owning a feature from UI to API, database and deployment on AWS and Azure. Fluent in English (C1), based in Lima with an EST-aligned time zone.",
+      "Fullstack Engineer with 5+ years shipping production web apps end to end, from Angular, React and Next.js micro-frontends to Node.js and Nest.js microservices, for top-tier banks, enterprise clients across Latin America, and US",
   },
   metrics: [
     {
@@ -274,7 +274,7 @@ const en: Content = {
     {
       title: "Frontend",
       items: [
-        "Angular (v13-v21)",
+        "Angular",
         "TypeScript",
         "RxJS",
         "NgRx",
@@ -301,7 +301,7 @@ const en: Content = {
     {
       title: "Cloud & DevOps",
       items: [
-        "AWS (S3, Lambda, RDS)",
+        "AWS",
         "CloudWatch",
         "Azure DevOps",
         "Docker",
@@ -369,13 +369,13 @@ const es: Content = {
   profile: {
     name: "Richard Rodas",
     role: "Ingeniero Fullstack",
-    location: "Lima, Perú · Remoto (EE. UU./Canadá)",
+    location: "Lima, Perú · Remoto",
     email: "richard@rodasridar.dev",
     linkedin: "https://linkedin.com/in/rodasridar",
     github: "https://github.com/rodasridar",
-    cvPath: "/resume.pdf",
+    cvPath: "/Richard_Rodas_CV_FullStack_Developer.pdf",
     summary:
-      "Ingeniero Fullstack con más de 5 años entregando aplicaciones web en producción de punta a punta, desde micro-frontends en Angular, React y Next.js hasta microservicios en Node.js y Nest.js, para bancos de primer nivel, clientes enterprise en Latinoamérica y una plataforma global de talento con IA que atiende a más de 100K usuarios. Me siento cómodo tomando una feature completa: UI, API, base de datos y despliegue en AWS y Azure. Inglés fluido (C1), radicado en Lima con una zona horaria alineada a EST.",
+      "Ingeniero Fullstack con más de 5 años desarrollando aplicaciones web en producción de punta a punta, desde micro-frontends en Angular, React y Next.js hasta microservicios en Node.js y Nest.js, para bancos de primer nivel, clientes enterprise en Latinoamérica y US.",
   },
   metrics: [
     {
@@ -566,7 +566,7 @@ const es: Content = {
     {
       title: "Frontend",
       items: [
-        "Angular (v13-v21)",
+        "Angular",
         "TypeScript",
         "RxJS",
         "NgRx",
@@ -593,7 +593,7 @@ const es: Content = {
     {
       title: "Cloud y DevOps",
       items: [
-        "AWS (S3, Lambda, RDS)",
+        "AWS",
         "CloudWatch",
         "Azure DevOps",
         "Docker",
@@ -636,7 +636,7 @@ const es: Content = {
       downloadCv: "Descargar CV",
     },
     hero: {
-      headline: "Ingeniería fullstack para banca y empresa.",
+      headline: "Ingeniería fullstack para banca y empresas.",
       getInTouch: "Conversemos",
     },
     sections: {
